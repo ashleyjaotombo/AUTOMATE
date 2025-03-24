@@ -1,0 +1,3 @@
+C:/Users/victo/Downloads/FINAL-Version-main/cmake-build-debug/CMakeFiles/ProjetAutomate_main_3.dir
+C:/Users/victo/Downloads/FINAL-Version-main/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/victo/Downloads/FINAL-Version-main/cmake-build-debug/CMakeFiles/rebuild_cache.dir
