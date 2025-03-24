@@ -16,7 +16,7 @@ int main() {
             break;
         }
 
-        printf("Quel automate voulez-vous utiliser ? ");
+        printf("Quel automate voulez-vous utiliser ? (ex : 15.txt ou 29.txt)");
         scanf("%s", nomFichier);
 
         Automate *automate = chargerAutomate(nomFichier);
