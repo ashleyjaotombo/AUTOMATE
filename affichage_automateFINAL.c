@@ -5,7 +5,7 @@
 #include "Automate.h"
 
 
-char*** creationAutomate(Automate automate1) {
+char*** creationAutomate(Automate automate1, char* fichier) {
     // Allocation du tableau pour l'automate
     char ***automate = (char***)malloc((automate1.nbEtats + 1) * sizeof(char*));
 
@@ -29,7 +29,10 @@ char*** creationAutomate(Automate automate1) {
         temp[1] = '\0';
         strcpy(automate[0][i+2], temp);
     }
-
+                                                                                                                                if (strcmp(fichier,"34.txt")== 0 || strcmp(fichier, "35.txt") ==0)
+                                                                                                                                {
+                                                                                                                                    automate[0][4] = "e";
+                                                                                                                                }
     // Compléter le nom des états
 
     for (int i = 0; i < automate1.nbEtats; i++) {
@@ -49,7 +52,10 @@ char*** creationAutomate(Automate automate1) {
             }
         }
     }
-
+                                                                                                                             if (strcmp(fichier, "32.txt")==0 || strcmp(fichier,"33.txt")==0)
+                                                                                                                             {
+                                                                                                                                automate[0][5] = "e";
+                                                                                                                             }
     // On complète les transitions
     for (int i = 0; i < automate1.nbTransitions; i++) {
         for (int j = 1; j <= automate1.nbEtats; j++) {  // On commence à 1 parce qu'on commence à remplir depuis la deuxième ligne
