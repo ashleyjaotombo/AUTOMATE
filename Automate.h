@@ -29,7 +29,7 @@ typedef struct {
     int taille;            // Nombre d'états dans l'ensemble
 } EtatAD;
 
-char*** creationAutomate(Automate);
+char*** creationAutomate(Automate, char*);
 
 void afficherAutomate(char***, int, int);
 
