@@ -16,14 +16,14 @@ int main() {
             break;
         }
 
-        printf("Quel automate voulez-vous utiliser ? (ex : 15.txt ou 29.txt)");
+        printf("Quel automate voulez-vous utiliser ? ");
         scanf("%s", nomFichier);
 
         Automate *automate = chargerAutomate(nomFichier);
 
         testAutomate(automate);
 
-        char*** notreAutomate = creationAutomate(*automate);
+        char*** notreAutomate = creationAutomate(*automate, nomFichier);
 
         afficherAutomate(notreAutomate, automate->nbEtats, automate->nbSymboles);
 
@@ -36,7 +36,7 @@ int main() {
             StandardiserAutomate(automate);
             testAutomate(automate);
 
-            notreAutomate = creationAutomate(*automate);
+            notreAutomate = creationAutomate(*automate, nomFichier);
 
             afficherAutomate(notreAutomate, automate->nbEtats, automate->nbSymboles);
         }
@@ -88,7 +88,7 @@ int main() {
             printf("\n--- Automate Complementaire ---\n");
             testAutomate(complementaire);
 
-            notreAutomate = creationAutomate(*complementaire);
+            notreAutomate = creationAutomate(*complementaire, nomFichier);
             afficherAutomate(notreAutomate, complementaire->nbEtats, complementaire->nbSymboles);
         }
 
